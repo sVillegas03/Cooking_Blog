@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Local Cozy Kitchen</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <header class="text-center my-5">
+    <h1>Your Local Cozy Kitchen - By Sofia Villegas</h1>
+    <p class="lead">Welcome to my cooking blog with delicious and simple to follow recipes!</p>
+  </header>
+
+  <main>
+    <div th:each="recipe : ${recipes}" class="recipe-card mb-5">
+      <h2 class="text-center mb-4" th:text="${recipe.title}">Recipe Title</h2>
+
+      <div class="recipe-image mb-4">
+        <img th:src="${recipe.imageUrl}" alt="Recipe image" class="img-fluid rounded">
+      </div>
+
+      <p class="recipe-description" th:text="${recipe.description}">Recipe description</p>
+
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <h3>Ingredients</h3>
+          <ul>
+            <li th:each="ingredient : ${recipe.ingredients}"
+                th:text="${ingredient}">Ingredient</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h3>Instructions</h3>
+          <ol>
+            <li th:each="instruction : ${recipe.instructions}"
+                th:text="${instruction}">Instruction</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <section class="comments-section mb-5">
+      <h2 class="mb-4">Have any thoughts or questions? Please share or ask below!</h2>
+
+      <form th:action="@{/comment}" th:object="${newComment}" method="post" class="mb-4">
+        <div class="mb-3">
+          <label for="author" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="author"
+                 th:field="*{author}" required>
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">Your Comment</label>
+          <textarea class="form-control" id="content"
+                    th:field="*{content}" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post Comment</button>
+      </form>
+
+      <div class="comment-list">
+        <div th:each="comment : ${comments}" class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title" th:text="${comment.author}">Author</h5>
+            <h6 class="card-subtitle mb-2 text-muted"
+                th:text="${#temporals.format(comment.createdAt,
+                                               'MMM dd, yyyy hh:mm a')}">
+              Date
+            </h6>
+            <p class="card-text" th:text="${comment.content}">Comment content</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4 text-muted">
+    <p>© 2025 Your Local Cozy Kitchen</p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>

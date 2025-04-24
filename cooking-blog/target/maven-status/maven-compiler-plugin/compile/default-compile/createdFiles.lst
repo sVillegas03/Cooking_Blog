@@ -1,0 +1,9 @@
+com\cookingblog\service\RecipeService.class
+com\cookingblog\model\Comment.class
+com\cookingblog\controller\HomeController.class
+com\cookingblog\controller\RecipeController.class
+com\cookingblog\repository\RecipeRepository.class
+com\cookingblog\service\CommentService.class
+com\cookingblog\CookingBlogApplication.class
+com\cookingblog\repository\CommentRepository.class
+com\cookingblog\model\Recipe.class

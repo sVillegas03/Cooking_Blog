@@ -1,0 +1,5 @@
+# Created at 2025-04-22T21:00:38.114
+Boot Manifest-JAR contains absolute paths in classpath 'R:\Cooking_Blog\cooking-blog\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

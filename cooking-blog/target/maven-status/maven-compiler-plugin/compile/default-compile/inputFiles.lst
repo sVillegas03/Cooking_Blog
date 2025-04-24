@@ -1,0 +1,9 @@
+R:\Cooking_Blog\cooking-blog\src\main\java\com\cookingblog\CookingBlogApplication.java
+R:\Cooking_Blog\cooking-blog\src\main\java\com\cookingblog\model\Comment.java
+R:\Cooking_Blog\cooking-blog\src\main\java\com\cookingblog\service\CommentService.java
+R:\Cooking_Blog\cooking-blog\src\main\java\com\cookingblog\service\RecipeService.java
+R:\Cooking_Blog\cooking-blog\src\main\java\com\cookingblog\controller\RecipeController.java
+R:\Cooking_Blog\cooking-blog\src\main\java\com\cookingblog\repository\CommentRepository.java
+R:\Cooking_Blog\cooking-blog\src\main\java\com\cookingblog\model\Recipe.java
+R:\Cooking_Blog\cooking-blog\src\main\java\com\cookingblog\controller\HomeController.java
+R:\Cooking_Blog\cooking-blog\src\main\java\com\cookingblog\repository\RecipeRepository.java
