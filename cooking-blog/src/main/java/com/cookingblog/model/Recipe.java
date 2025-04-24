@@ -16,7 +16,7 @@ public class Recipe {
   public static List<Recipe> getAllRecipes() {
     List<Recipe> recipes = new ArrayList<>();
 
-    // Jamaica Hibiscus Tea
+    // Jamaica drink
     recipes.add(new Recipe(
             "Jamaica (Hibiscus Tea)",
             "A refreshing drink made from dried hibiscus flowers.",
@@ -40,7 +40,7 @@ public class Recipe {
             }
     ));
 
-    // Fettuccine Alfredo with Breaded Chicken
+    // Fettuccine alfredo with breaded chicken
     recipes.add(new Recipe(
             "Fettuccine Alfredo with Breaded Chicken",
             "A yummy homemade alfredo sauce over fettuccine pasta and breaded chicken.",
@@ -68,7 +68,7 @@ public class Recipe {
             }
     ));
 
-    // Albondigas Soup
+    // albondigas soup
     recipes.add(new Recipe(
             "Albondigas Soup",
             "Traditional Mexican meatball and vegetable soup in a flavorful broth.",
