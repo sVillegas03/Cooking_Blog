@@ -44,14 +44,12 @@ cooking-blog
 ```
 
 How to Run
-1. Install Java 17, MySQL
+1. Install Java 17 and MySQL
 2. Create a database named `cooking_blog`
-3. Update `application.properties` with your MySQL credentials
-4. Run:
-   ```bash
-   mvn spring-boot:run
+3. Update `application.properties` with your own MySQL credentials
+4. Run: mvn spring-boot:run
 5. Open your web browser and go to `http://localhost:8080` to view the application.
 
 Usage
-- The home page will display recipes and a comment section.
+- The home page will display delicious recipes and a comment section.
 
